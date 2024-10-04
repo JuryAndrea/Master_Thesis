@@ -1,0 +1,56 @@
+Bootstrap: docker
+From: nvidia/cuda:12.5.0-devel-ubuntu22.04
+
+%post
+    apt update && apt install -y \
+        python3 \
+        python3-pip \
+        python3-dev \
+        build-essential \
+        git \
+        wget \
+        libjpeg-dev \
+        zlib1g-dev \
+        libpng-dev \
+        libgl1-mesa-glx \
+        libglib2.0-0
+
+    pip3 install --upgrade pip
+
+    # Install Python libraries without specifying versions
+    pip3 install imgaug \
+                ipython \
+                matplotlib \
+                numpy \
+                pandas \
+                Pillow \
+                pytorch_nemo \
+                tabulate \
+                torch \
+                torchfunc \
+                torchinfo \
+                torchsummary \
+                torchmetrics \
+                torchvision \
+                tqdm \
+                Wand \
+                wandb \
+                opencv-python
+
+    # Add pip bin directory to PATH
+    echo 'export PATH=$PATH:/usr/local/bin' >> /etc/profile
+
+%environment
+    export LC_ALL=C
+    export PATH=$PATH:/usr/local/bin
+
+%runscript
+    exec "$@"
+
+%startscript
+
+%test
+
+%labels
+
+%help
