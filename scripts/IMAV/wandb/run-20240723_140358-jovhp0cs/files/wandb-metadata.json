@@ -1,0 +1,37 @@
+{
+    "os": "macOS-14.5-arm64-arm-64bit",
+    "python": "3.12.2",
+    "heartbeatAt": "2024-07-23T12:03:59.123546",
+    "startedAt": "2024-07-23T12:03:58.581303",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/jurydonofrio/Code/YOLO/IMAV/training_imav.py",
+    "codePathLocal": "training_imav.py",
+    "codePath": "training_imav.py",
+    "git": {
+        "remote": "https://github.com/L99-hash/IMAV.git",
+        "commit": "d79fe7202903bde0823d13816a1f16125b4e58c5"
+    },
+    "email": "jury.donofrio@gmail.com",
+    "root": "/Users/jurydonofrio/Code/YOLO/IMAV",
+    "host": "Jurys-MBP.usilu.net",
+    "username": "jurydonofrio",
+    "executable": "/opt/miniconda3/envs/imav/bin/python3",
+    "cpu_count": 10,
+    "cpu_count_logical": 10,
+    "disk": {
+        "/": {
+            "total": 460.4317207336426,
+            "used": 406.8538475036621
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

@@ -1,0 +1,18 @@
+##### ======== REBUTTAL tests ========
+python training_imav.py --gpu=0 --model_name=photometric_test_all       --aug=all          --block_type=ResBlock   --depth_mult=1.0    --arch=dronet_imav --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --image_size=162x162
+python training_imav.py --gpu=0 --model_name=photometric_test_blur      --aug=blur          --block_type=ResBlock   --depth_mult=1.0    --arch=dronet_imav --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --image_size=162x162
+python training_imav.py --gpu=2 --model_name=photometric_test_exposure  --aug=exposure      --block_type=ResBlock   --depth_mult=1.0    --arch=dronet_imav --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --image_size=162x162
+python training_imav.py --gpu=3 --model_name=photometric_test_noise     --aug=noise         --block_type=ResBlock   --depth_mult=1.0    --arch=dronet_imav --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --image_size=162x162
+python training_imav.py --gpu=3 --model_name=photometric_test_none      --aug=none         --block_type=ResBlock   --depth_mult=1.0    --arch=dronet_imav --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --image_size=162x162
+
+python training_imav.py --gpu=0 --model_name=photometric_test_blur_exposure      --aug=blur_exposure     --block_type=ResBlock   --depth_mult=1.0    --arch=dronet_imav --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --image_size=162x162
+python training_imav.py --gpu=1 --model_name=photometric_test_blur_noise         --aug=blur_noise        --block_type=ResBlock   --depth_mult=1.0    --arch=dronet_imav --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --image_size=162x162
+python training_imav.py --gpu=2 --model_name=photometric_test_noise_exposure     --aug=noise_exposure    --block_type=ResBlock   --depth_mult=1.0    --arch=dronet_imav --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --image_size=162x162
+##### ================================
+
+
+### TRAINING OF PULP-DRONET-V2 WITH IMAV DATASET FINETUNING
+python training.py --gpu=0   --model_name=pulp_dronet_v2_imav_finetuning_1ep --epochs=1 --dataset=imav --resume_training --model_weights=/home/lamberti/work/IMAV_rebuttal/paper/pulp-dronet-v2/model/dronet_v2_nemo_dory_original_himax.pth --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --data_path_dronetv2=/home/lamberti/work/dataset/pulp-dronet-dataset --depth_mult=1.0
+python training.py --gpu=1   --model_name=pulp_dronet_v2_imav_finetuning_2ep --epochs=2 --dataset=imav --resume_training --model_weights=/home/lamberti/work/IMAV_rebuttal/paper/pulp-dronet-v2/model/dronet_v2_nemo_dory_original_himax.pth --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --data_path_dronetv2=/home/lamberti/work/dataset/pulp-dronet-dataset --depth_mult=1.0
+python training.py --gpu=2   --model_name=pulp_dronet_v2_imav_finetuning_3ep --epochs=3 --dataset=imav --resume_training --model_weights=/home/lamberti/work/IMAV_rebuttal/paper/pulp-dronet-v2/model/dronet_v2_nemo_dory_original_himax.pth --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --data_path_dronetv2=/home/lamberti/work/dataset/pulp-dronet-dataset --depth_mult=1.0
+python training.py --gpu=3   --model_name=pulp_dronet_v2_imav_finetuning_100ep_2 --epochs=100 --dataset=imav --resume_training --model_weights=/home/lamberti/work/IMAV_rebuttal/paper/pulp-dronet-v2/model/dronet_v2_nemo_dory_original_himax.pth --data_path=/home/lamberti/work/dataset/imav/imav-dataset/z_50/ --data_path_dronetv2=/home/lamberti/work/dataset/pulp-dronet-dataset --depth_mult=1.0

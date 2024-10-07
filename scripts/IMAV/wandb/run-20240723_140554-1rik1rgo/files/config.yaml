@@ -1,0 +1,50 @@
+wandb_version: 1
+
+epochs:
+  desc: null
+  value: 100
+train_batch:
+  desc: null
+  value: 32
+val_batch:
+  desc: null
+  value: 32
+test_batch:
+  desc: null
+  value: 32
+learning_rate:
+  desc: null
+  value: 0.001
+_wandb:
+  desc: null
+  value:
+    python_version: 3.12.2
+    cli_version: 0.16.6
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1721736354.0
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      3:
+      - 2
+      - 13
+      - 16
+      - 23
+      4: 3.12.2
+      5: 0.16.6
+      8:
+      - 4
+      - 5
+      13: darwin-arm64
