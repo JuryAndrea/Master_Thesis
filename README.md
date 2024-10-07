@@ -6,7 +6,7 @@ This repository contains the code and resources for the master thesis project of
 
 - **definitions/**: Contains definition files used for singleton in tethys.
 - **jupyter_notebook/**: Includes a Jupyter notebook for data visualization and analysis.
-- **scripts/**: Contains Python scripts for training and testing the model. Moreover, it contains the `pth` files of the trained models.
+- **scripts/**: Contains Python scripts for training and testing the models. Moreover, it contains the `pth` files of the trained models.
 - **Webots.zip**: A zipped folder with Webots simulation files, including the worlds, the controllers, and the proto files.
 
 ## Installation
